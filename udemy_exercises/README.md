@@ -1,6 +1,6 @@
 **UDEMY Exercises**
 
-Complete the following challenges that's part of Section 8 of the Java Masterclass Udemy course : 
+Complete the following challenges that'AutoboxingUnboxing part of Section 8 of the Java Masterclass Udemy course : 
 
 For your convenience, the exercises from UDEMY are summarized below:
 
@@ -16,8 +16,8 @@ For your convenience, the exercises from UDEMY are summarized below:
      - List of Transactions
      - addCustomer and initial transaction amount
      - Also needs to add additional transactions for that customer/branch
-   - **Customer Class**:
-     - Customer Name
+   - **LinkedLists.Customer Class**:
+     - LinkedLists.Customer Name
   
 2.  **Song Player w/ Java Classes**
      - **Song class** 
