@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     private static Scanner scanner = new Scanner((System.in));
-    private static CellPhone cellPhone = new CellPhone("123 234 3456");
+    private static udemy_exercises.cell_phone.CellPhone cellPhone = new udemy_exercises.cell_phone.CellPhone("123 234 3456");
 
 
 
@@ -55,7 +55,7 @@ public class Main {
         String name = scanner.nextLine();
         System.out.println("Enter a phone number: ");
         String phone = scanner.nextLine();
-        Contact newContact = Contact.createContact(name, phone);
+        udemy_exercises.cell_phone.Contact newContact = udemy_exercises.cell_phone.Contact.createContact(name, phone);
 
         if (cellPhone.addContact(newContact)){
             System.out.println("New contact added: " + name + ", " + phone + ".");
@@ -67,7 +67,7 @@ public class Main {
     private static void updateContact(){
         System.out.println("Enter existing contact name: ");
         String name = scanner.nextLine();
-        Contact existingContactRecord = cellPhone.queryContact(name);
+        udemy_exercises.cell_phone.Contact existingContactRecord = cellPhone.queryContact(name);
         if(existingContactRecord == null){
             System.out.println("Contact not found.");
             return;
@@ -77,7 +77,7 @@ public class Main {
         String newName = scanner.nextLine();
         System.out.println("Enter new contact phone number");
         String newPhone = scanner.nextLine();
-        Contact newContact = Contact.createContact(newName, newPhone);
+        udemy_exercises.cell_phone.Contact newContact = udemy_exercises.cell_phone.Contact.createContact(newName, newPhone);
         if (cellPhone.updateContact(existingContactRecord, newContact)){
             System.out.println("Successfully updates contact: ");
         } else {
@@ -89,7 +89,7 @@ public class Main {
     private static void removeContact() {
         System.out.println("Enter contact to delete: ");
         String name = scanner.nextLine();
-        Contact existingContactRecord = cellPhone.queryContact(name);
+        udemy_exercises.cell_phone.Contact existingContactRecord = cellPhone.queryContact(name);
         if (existingContactRecord == null) {
             System.out.println("Contact not found.");
             return;
@@ -104,7 +104,7 @@ public class Main {
     private static void queryContact() {
         System.out.println("Enter contact to search: ");
         String name = scanner.nextLine();
-        Contact existingContactRecord = cellPhone.queryContact(name);
+        udemy_exercises.cell_phone.Contact existingContactRecord = cellPhone.queryContact(name);
         if (existingContactRecord == null) {
             System.out.println("Contact not found.");
             return;

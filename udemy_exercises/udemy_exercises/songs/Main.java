@@ -4,11 +4,11 @@ import java.util.*;
 
 public class Main {
 
-    private static ArrayList<Album> albums = new ArrayList<Album>();
+    private static ArrayList<udemy_exercises.songs.Album> albums = new ArrayList<udemy_exercises.songs.Album>();
 
     public static void main(String[] args) {
 
-        Album album = new Album("This Time I''m Swingin'", "Dean Martin");
+        udemy_exercises.songs.Album album = new udemy_exercises.songs.Album("This Time I''m Swingin'", "Dean Martin");
         album.addSong("I Can't Believe That You're In Love With Me", 2.25);
         album.addSong("True Love", 2.33);
         album.addSong("You're nobody 'Til Somebody Loves You", 2.14);
@@ -16,14 +16,14 @@ public class Main {
         album.addSong("Imagination", 3.15);
         albums.add(album);
 
-        album = new Album("Come Fly With Me", "Frank Sinatra");
+        album = new udemy_exercises.songs.Album("Come Fly With Me", "Frank Sinatra");
         album.addSong("Come Fly With Me", 3.19);
         album.addSong("Around The World", 3.21);
         album.addSong("Isle Of Capri", 2.29);
         album.addSong("Moonlight In Vermont", 3.33);
         albums.add(album);
 
-        LinkedList<Song> playlist = new LinkedList<Song>();
+        LinkedList<udemy_exercises.songs.Song> playlist = new LinkedList<udemy_exercises.songs.Song>();
         albums.get(0).addToPlaylist("You're nobody 'Til Somebody Loves You", playlist);
         albums.get(0).addToPlaylist("On The Street Where You Live", playlist);
         albums.get(0).addToPlaylist("Ain't That A Kick In The Head", playlist);
@@ -36,11 +36,11 @@ public class Main {
     }
 
 
-    private static void play(LinkedList<Song> playlist) {
+    private static void play(LinkedList<udemy_exercises.songs.Song> playlist) {
         Scanner scanner = new Scanner(System.in);
         boolean quit = false;
         boolean forward = true;
-        ListIterator<Song> listIterator = playlist.listIterator();
+        ListIterator<udemy_exercises.songs.Song> listIterator = playlist.listIterator();
         if (playlist.size() == 0) {
             System.out.println("Empty playlist!");
             return;
@@ -136,8 +136,8 @@ public class Main {
     }
 
     //in this method the iterator only iterates once. perfect for what we are using it for! Note! Look at this later, fogged,
-    private static void printList(LinkedList<Song> playlist) {
-        Iterator<Song> iterator = playlist.iterator();
+    private static void printList(LinkedList<udemy_exercises.songs.Song> playlist) {
+        Iterator<udemy_exercises.songs.Song> iterator = playlist.iterator();
         System.out.println("====================");
         while(iterator.hasNext()) {
             System.out.println(iterator.next());
